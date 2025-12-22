@@ -5,7 +5,7 @@
   "types": "build/ExpoConfig.d.ts",
   "main": "build/ExpoConfig.js",
   "scripts": {
-    "build": "expo-module tsc",
+    "build": "node init && expo-module tsc",
     "clean": "expo-module clean",
     "generate": "node ./scripts/generate.js",
     "lint": "expo-module lint",

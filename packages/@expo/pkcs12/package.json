@@ -11,7 +11,7 @@
     "build"
   ],
   "scripts": {
-    "build": "expo-module tsc",
+    "build": "node init && expo-module tsc",
     "clean": "expo-module clean",
     "lint": "expo-module lint",
     "prepare": "yarn run clean && yarn run build",

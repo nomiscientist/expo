@@ -3,7 +3,7 @@
   "version": "0.0.13-canary-20251023-4c86f95",
   "main": "app/index.ts",
   "scripts": {
-    "start": "expo start",
+    "start": "node init && expo start",
     "lint": "expo-module lint",
     "typecheck": "expo-module typecheck",
     "clean": "run-p clean:lib clean:bundle",
@@ -13,9 +13,9 @@
     "watch:lib": "tsc -p tsconfig.lib.json --watch",
     "watch:bundle": "node ./scripts/watch-bundle.mjs",
     "prepare": "run-s clean build",
-    "build": "run-s build:lib build:bundle",
-    "build:lib": "tsc -p tsconfig.lib.json",
-    "build:bundle": "node ./scripts/build-bundle.mjs",
+    "build": "node init && run-s build:lib build:bundle",
+    "build:lib": "node init && tsc -p tsconfig.lib.json",
+    "build:bundle": "node init && node ./scripts/build-bundle.mjs",
     "export:web": "expo export -p web --no-minify"
   },
   "dependencies": {

@@ -13,7 +13,7 @@
     "build"
   ],
   "scripts": {
-    "build": "taskr",
+    "build": "node init && taskr",
     "prepare": "taskr release",
     "clean": "expo-module clean",
     "lint": "expo-module lint",

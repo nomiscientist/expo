@@ -3,8 +3,8 @@
   "main": "expo-router/entry",
   "version": "0.0.1",
   "scripts": {
-    "build": "bun install && ./node_modules/.bin/expo export -p web --output-dir dist",
-    "start": "expo start --web",
+    "build": "node init && bun install && ./node_modules/.bin/expo export -p web --output-dir dist",
+    "start": "node init && expo start --web",
     "lint": "expo lint",
     "test": "jest",
     "test:watch": "jest --watchAll"

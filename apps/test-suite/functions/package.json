@@ -1,10 +1,10 @@
 {
   "name": "functions",
   "scripts": {
-    "build": "tsc",
+    "build": "node init && tsc",
     "serve": "yarn build && firebase serve --only functions",
     "shell": "yarn build && firebase functions:shell",
-    "start": "yarn shell",
+    "start": "node init && yarn shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log"
   },
